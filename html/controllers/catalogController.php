@@ -2,5 +2,6 @@
     class catalogController{
         public function actionCategory(){
             echo "catalogController actionCategory";
+            return true;
         }
     }

@@ -35,7 +35,7 @@
                     $controller = ROOT."/controllers/".$controllerName.".php";
                     if(file_exists($controller))
                     {
-                        include_once($controller);
+                        require_once($controller);
                     }
 
                     //create object

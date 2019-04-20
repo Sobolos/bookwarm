@@ -26,8 +26,10 @@
                 //check for matching with routes
                 if(preg_match("~$uriPattern~", $uri))
                 {
+                    $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+
                     //getting controller and action name
-                    $segments = explode('/', $path);
+                    $segments = explode('/', $internalRoute);
                     $controllerName = array_shift($segments).'Controller';
                     $actionName = 'action'.ucfirst(array_shift($segments));
                     

@@ -1,4 +1,7 @@
 <?php
+
+    include_once ROOT.'/models/profile.php';
+
     class profileController{
         public function actionMe(){
             echo "profileController actionMe";
@@ -6,8 +9,10 @@
         }
 
         public function actionView($id){
-            echo "profileController actionView <br>";
-            echo "viewing profile with id {$id}";
+            if($id){
+                $user = profile::getUserByID($id);
+                include_once ROOT.'/views/profile.php';
+            }
             return true;
         }
     }

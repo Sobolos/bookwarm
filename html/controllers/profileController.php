@@ -1,12 +1,13 @@
 <?php
     class profileController{
         public function actionMe(){
-            echo "просмотр моего профиля <br>";
+            echo "profileController actionMe";
             return true;
         }
 
-        public function actionView(){
-            echo "просмотр чужого профиля <br>";
+        public function actionView($id){
+            echo "profileController actionView <br>";
+            echo "viewing profile with id {$id}";
             return true;
         }
     }

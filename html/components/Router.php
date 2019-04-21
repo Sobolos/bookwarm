@@ -30,8 +30,11 @@
 
                     //getting controller and action name
                     $segments = explode('/', $internalRoute);
+
                     $controllerName = array_shift($segments).'Controller';
                     $actionName = 'action'.ucfirst(array_shift($segments));
+
+                    $parameters = $segments;;
                     
                     //include controller file
                     $controller = ROOT."/controllers/".$controllerName.".php";
@@ -42,7 +45,7 @@
 
                     //create object
                     $controllerObj = new $controllerName;
-                    $result = $controllerObj->$actionName();
+                    $result = call_user_func_array(array($controllerObj, $actionName), $parameters);
                     if($result != null)
                     {
                         break;

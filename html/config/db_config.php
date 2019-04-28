@@ -4,5 +4,5 @@
         $host = 'localhost',
         $db_name = 'bookwarm',
         $db_user = 'root',
-        $u_pass = 'parolmysql',
+        $u_pass = 'password'
     );

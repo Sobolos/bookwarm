@@ -1,6 +1,6 @@
 <?php
     return array(
-        'all' => 'index/global', //getNews in indexController
+        '' => 'index/global', //getNews in indexController
         'news' => 'index/mynews', //getMynews in indexController
 
         'catalog' => 'catalog/category', //getCatalog in CatalogController

@@ -1,6 +1,6 @@
 <?php
 
-    include_once ROOT.'/models/profile.php';
+    include_once ROOT . '/models/profile.php';
 
     class profileController{
         public function actionMe(){
@@ -11,7 +11,7 @@
         public function actionView($id){
             if($id){
                 $user = profile::getUserByID($id);
-                include_once ROOT.'/views/profile.php';
+                include_once ROOT . '/views/profile.php';
             }
             return true;
         }
